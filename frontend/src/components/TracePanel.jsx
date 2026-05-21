@@ -1,4 +1,4 @@
-import { CheckCircle2, Filter, Gauge, RotateCcw, SlidersHorizontal, XCircle } from "lucide-react";
+import { CheckCircle2, Filter, Gauge, Loader2, RotateCcw, SlidersHorizontal, XCircle } from "lucide-react";
 
 function TraceValue({ label, value }) {
   return (
@@ -9,7 +9,22 @@ function TraceValue({ label, value }) {
   );
 }
 
-function TracePanel({ trace }) {
+function TracePanel({ trace, isLoading }) {
+  if (isLoading) {
+    return (
+      <section className="trace-panel">
+        <div className="section-title">
+          <SlidersHorizontal size={20} aria-hidden="true" />
+          <h2>Metadata Trace</h2>
+        </div>
+        <div className="loading-block">
+          <Loader2 className="spin" size={26} aria-hidden="true" />
+          <span>Extracting metadata filters</span>
+        </div>
+      </section>
+    );
+  }
+
   if (!trace) {
     return (
       <section className="trace-panel">
@@ -67,4 +82,3 @@ function TracePanel({ trace }) {
 }
 
 export default TracePanel;
-

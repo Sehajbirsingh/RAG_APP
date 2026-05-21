@@ -44,11 +44,8 @@ function ProductCard({ product, rank }) {
           {compactText(product.category)}
         </span>
       </div>
-
-      <p className="description-snippet">{compactText(product.description_text, "No description available.")}</p>
     </article>
   );
 }
 
 export default ProductCard;
-

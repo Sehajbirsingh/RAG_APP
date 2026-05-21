@@ -36,10 +36,17 @@ def build_answer_prompt(query: str, products: list[dict]) -> str:
     retrieved_products_text = format_retrieved_products(products)
 
     return f"""
-/no_think
 You are a retail product recommendation assistant.
 
-Your job is to answer the user's query using ONLY the retrieved product records provided below.
+Your job is to answer the exact user query below using ONLY the retrieved product records provided.
+
+USER QUERY:
+\"\"\"
+{query}
+\"\"\"
+
+RETRIEVED PRODUCT RECORDS:
+{retrieved_products_text}
 
 The user query may be:
 1. A product recommendation request
@@ -72,12 +79,8 @@ If no retrieved product satisfies all hard constraints, say that clearly and rec
 Do not invent product details.
 Do not use outside knowledge.
 If the retrieved data does not mention something, say it is unclear.
-
-User query:
-{query}
-
-Retrieved products:
-{retrieved_products_text}
+Do not say that the user query is missing; the user query is provided above inside USER QUERY.
+Do not include hidden reasoning, analysis notes, or <think> tags.
 
 Respond in this structure:
 
@@ -100,6 +103,17 @@ Respond in this structure:
 """
 
 
+def sanitize_answer(text: str) -> str:
+    if not text:
+        return ""
+
+    think_end = text.rfind("</think>")
+    if think_end != -1:
+        text = text[think_end + len("</think>") :]
+
+    return text.strip()
+
+
 def generate_answer(query: str, products: list[dict]) -> str:
     if not products:
         return "No matching products were retrieved, so I cannot make a grounded recommendation."
@@ -120,4 +134,5 @@ def generate_answer(query: str, products: list[dict]) -> str:
     )
     response.raise_for_status()
     data = response.json()
-    return (data.get("response") or data.get("thinking") or "").strip()
+    answer = sanitize_answer(data.get("response") or "")
+    return answer or "The model did not return a final answer."

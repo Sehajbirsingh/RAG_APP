@@ -7,6 +7,7 @@ import {
   Loader2,
   PackageSearch,
   Search,
+  User,
   Sparkles,
 } from "lucide-react";
 
@@ -23,7 +24,8 @@ const examples = [
 ];
 
 function App() {
-  const [query, setQuery] = useState(examples[0]);
+  const [query, setQuery] = useState("");
+  const [submittedQuery, setSubmittedQuery] = useState("");
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -44,6 +46,9 @@ function App() {
 
     setIsLoading(true);
     setError("");
+    setSubmittedQuery(cleanQuery);
+    setResult(null);
+    setQuery("");
 
     try {
       const response = await fetch(`${API_BASE_URL}/search`, {
@@ -73,48 +78,13 @@ function App() {
             <PackageSearch size={18} aria-hidden="true" />
             Hybrid Retail RAG
           </div>
-          <h1>Product search with metadata-aware retrieval</h1>
+          <h1>Metadata-aware product search</h1>
         </div>
 
         <div className="status-pill" aria-live="polite">
           {isLoading ? <Loader2 className="spin" size={18} aria-hidden="true" /> : <Sparkles size={18} aria-hidden="true" />}
           {statusText}
         </div>
-      </section>
-
-      <section className="search-band">
-        <form className="search-console" onSubmit={runSearch}>
-          <div className="query-field">
-            <Search size={20} aria-hidden="true" />
-            <textarea
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              rows={4}
-              placeholder="Search for retail products..."
-            />
-          </div>
-
-          <div className="console-actions">
-            <div className="example-row">
-              {examples.map((example) => (
-                <button
-                  className="example-chip"
-                  key={example}
-                  type="button"
-                  onClick={() => setQuery(example)}
-                  title={example}
-                >
-                  {example}
-                </button>
-              ))}
-            </div>
-
-            <button className="search-button" type="submit" disabled={isLoading}>
-              {isLoading ? <Loader2 className="spin" size={20} aria-hidden="true" /> : <BrainCircuit size={20} aria-hidden="true" />}
-              Search
-            </button>
-          </div>
-        </form>
       </section>
 
       {error && (
@@ -124,10 +94,19 @@ function App() {
         </section>
       )}
 
+      {submittedQuery && (
+        <section className="submitted-query" aria-label="Submitted query">
+          <div className="query-avatar">
+            <User size={18} aria-hidden="true" />
+          </div>
+          <p>{submittedQuery}</p>
+        </section>
+      )}
+
       <section className="results-grid">
         <div className="answer-column">
           <AnswerPanel answer={result?.answer} isLoading={isLoading} />
-          <TracePanel trace={trace} />
+          <TracePanel trace={trace} isLoading={isLoading} />
         </div>
 
         <div className="products-column">
@@ -136,7 +115,12 @@ function App() {
             <h2>Retrieved Products</h2>
           </div>
 
-          {products.length === 0 && !isLoading ? (
+          {isLoading ? (
+            <div className="loading-block products-loading">
+              <Loader2 className="spin" size={26} aria-hidden="true" />
+              <span>Retrieving products</span>
+            </div>
+          ) : products.length === 0 ? (
             <div className="empty-panel">
               <Filter size={22} aria-hidden="true" />
               <span>No products loaded yet.</span>
@@ -154,9 +138,43 @@ function App() {
           )}
         </div>
       </section>
+
+      <section className="search-band">
+        <form className="search-console" onSubmit={runSearch}>
+          <div className="example-row">
+            {examples.map((example) => (
+              <button
+                className="example-chip"
+                key={example}
+                type="button"
+                onClick={() => setQuery(example)}
+                title={example}
+              >
+                {example}
+              </button>
+            ))}
+          </div>
+
+          <div className="composer-row">
+            <div className="query-field">
+              <Search size={20} aria-hidden="true" />
+              <textarea
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                rows={2}
+                placeholder="Ask for a product, brand, color, material, or use case..."
+              />
+            </div>
+
+            <button className="search-button" type="submit" disabled={isLoading || !query.trim()}>
+              {isLoading ? <Loader2 className="spin" size={20} aria-hidden="true" /> : <BrainCircuit size={20} aria-hidden="true" />}
+              Search
+            </button>
+          </div>
+        </form>
+      </section>
     </main>
   );
 }
 
 export default App;
-
