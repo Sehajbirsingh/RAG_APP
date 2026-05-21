@@ -25,6 +25,6 @@ class ProductResult(BaseModel):
 class SearchResponse(BaseModel):
     query: str
     answer: str
+    thinking: Optional[str] = None
     metadata_trace: dict[str, Any]
     top_products: list[ProductResult]
-

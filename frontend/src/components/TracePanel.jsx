@@ -1,4 +1,5 @@
-import { CheckCircle2, Filter, Gauge, Loader2, RotateCcw, SlidersHorizontal, XCircle } from "lucide-react";
+import { CheckCircle2, ChevronDown, Filter, Gauge, Loader2, RotateCcw, SlidersHorizontal, XCircle } from "lucide-react";
+import { useState } from "react";
 
 function TraceValue({ label, value }) {
   return (
@@ -10,6 +11,8 @@ function TraceValue({ label, value }) {
 }
 
 function TracePanel({ trace, isLoading }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   if (isLoading) {
     return (
       <section className="trace-panel">
@@ -43,40 +46,53 @@ function TracePanel({ trace, isLoading }) {
   const used = Boolean(trace.metadata_step_used);
 
   return (
-    <section className="trace-panel">
-      <div className="section-title">
-        <SlidersHorizontal size={20} aria-hidden="true" />
-        <h2>Metadata Trace</h2>
-      </div>
-
-      <div className={`decision-banner ${used ? "used" : "skipped"}`}>
-        {used ? <CheckCircle2 size={19} aria-hidden="true" /> : <XCircle size={19} aria-hidden="true" />}
-        <span>{trace.decision}</span>
-      </div>
-
-      <div className="trace-grid">
-        <TraceValue label="Brand" value={trace.brand} />
-        <TraceValue label="Color" value={trace.color} />
-        <TraceValue label="Material" value={trace.material} />
-        <TraceValue label="Confidence" value={trace.confidence} />
-      </div>
-
-      <div className="count-row">
-        <span>
-          <Filter size={15} aria-hidden="true" />
-          {trace.filtered_count ?? "Skipped"}
+    <section className={`trace-panel ${isOpen ? "is-open" : ""}`}>
+      <button
+        className="trace-summary"
+        type="button"
+        onClick={() => setIsOpen((value) => !value)}
+        aria-expanded={isOpen}
+      >
+        <span className="section-title">
+          <SlidersHorizontal size={20} aria-hidden="true" />
+          <h2>Metadata Trace</h2>
         </span>
-        <span>
-          <Gauge size={15} aria-hidden="true" />
-          {trace.candidate_count ?? trace.original_count ?? "NA"}
+
+        <span className={`trace-summary-decision ${used ? "used" : "skipped"}`}>
+          {used ? <CheckCircle2 size={17} aria-hidden="true" /> : <XCircle size={17} aria-hidden="true" />}
+          {trace.decision}
         </span>
-        {trace.fallback_used && (
-          <span>
-            <RotateCcw size={15} aria-hidden="true" />
-            Fallback
-          </span>
-        )}
-      </div>
+
+        <ChevronDown className="trace-chevron" size={18} aria-hidden="true" />
+      </button>
+
+      {isOpen && (
+        <div className="trace-details">
+          <div className="trace-grid">
+            <TraceValue label="Brand" value={trace.brand} />
+            <TraceValue label="Color" value={trace.color} />
+            <TraceValue label="Material" value={trace.material} />
+            <TraceValue label="Confidence" value={trace.confidence} />
+          </div>
+
+          <div className="count-row">
+            <span>
+              <Filter size={15} aria-hidden="true" />
+              {trace.filtered_count ?? "Skipped"}
+            </span>
+            <span>
+              <Gauge size={15} aria-hidden="true" />
+              {trace.candidate_count ?? trace.original_count ?? "NA"}
+            </span>
+            {trace.fallback_used && (
+              <span>
+                <RotateCcw size={15} aria-hidden="true" />
+                Fallback
+              </span>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

@@ -80,7 +80,7 @@ Do not invent product details.
 Do not use outside knowledge.
 If the retrieved data does not mention something, say it is unclear.
 Do not say that the user query is missing; the user query is provided above inside USER QUERY.
-Do not include hidden reasoning, analysis notes, or <think> tags.
+The final answer must not include hidden reasoning, analysis notes, or <think> tags.
 
 Respond in this structure:
 
@@ -103,20 +103,31 @@ Respond in this structure:
 """
 
 
-def sanitize_answer(text: str) -> str:
+def split_answer_and_thinking(text: str, thinking: str | None = None) -> dict[str, str | None]:
     if not text:
-        return ""
+        return {"answer": "", "thinking": thinking.strip() if thinking else None}
 
     think_end = text.rfind("</think>")
     if think_end != -1:
+        think_start = text.find("<think>")
+        if think_start != -1:
+            thinking = text[think_start + len("<think>") : think_end].strip()
+        else:
+            thinking = text[:think_end].strip()
         text = text[think_end + len("</think>") :]
 
-    return text.strip()
+    return {
+        "answer": text.strip(),
+        "thinking": thinking.strip() if thinking else None,
+    }
 
 
-def generate_answer(query: str, products: list[dict]) -> str:
+def generate_answer(query: str, products: list[dict]) -> dict[str, str | None]:
     if not products:
-        return "No matching products were retrieved, so I cannot make a grounded recommendation."
+        return {
+            "answer": "No matching products were retrieved, so I cannot make a grounded recommendation.",
+            "thinking": None,
+        }
 
     response = requests.post(
         OLLAMA_GENERATE_URL,
@@ -124,7 +135,7 @@ def generate_answer(query: str, products: list[dict]) -> str:
             "model": ANSWER_MODEL,
             "prompt": build_answer_prompt(query, products),
             "stream": False,
-            "think": False,
+            "think": True,
             "options": {
                 "temperature": 0.2,
                 "top_p": 0.9,
@@ -134,5 +145,9 @@ def generate_answer(query: str, products: list[dict]) -> str:
     )
     response.raise_for_status()
     data = response.json()
-    answer = sanitize_answer(data.get("response") or "")
-    return answer or "The model did not return a final answer."
+    payload = split_answer_and_thinking(
+        data.get("response") or "",
+        thinking=data.get("thinking"),
+    )
+    payload["answer"] = payload["answer"] or "The model did not return a final answer."
+    return payload

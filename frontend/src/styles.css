@@ -50,6 +50,13 @@ button {
   backdrop-filter: blur(18px);
 }
 
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
 .hero-copy h1 {
   margin: 6px 0 0;
   color: #f2f6f3;
@@ -77,6 +84,7 @@ button {
 }
 
 .status-pill {
+  appearance: none;
   min-height: 42px;
   gap: 9px;
   padding: 0 16px;
@@ -88,6 +96,15 @@ button {
     10px 10px 24px rgba(0, 0, 0, 0.34),
     -8px -8px 22px rgba(76, 91, 86, 0.22);
   white-space: nowrap;
+}
+
+.products-trigger {
+  cursor: pointer;
+}
+
+.products-trigger:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
 }
 
 .search-band {
@@ -279,10 +296,9 @@ textarea::placeholder {
 }
 
 .results-grid {
-  display: grid;
-  grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.35fr);
-  gap: 24px;
-  align-items: start;
+  display: block;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .answer-column,
@@ -294,6 +310,77 @@ textarea::placeholder {
 .answer-panel,
 .trace-panel {
   padding: 20px;
+}
+
+.trace-panel {
+  padding: 0;
+}
+
+.trace-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto 22px;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  min-height: 70px;
+  padding: 18px 20px;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.trace-summary .section-title {
+  margin-bottom: 0;
+}
+
+.trace-summary-decision {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.trace-summary-decision.used {
+  color: #bef1dc;
+  background: rgba(52, 116, 91, 0.28);
+}
+
+.trace-summary-decision.skipped {
+  color: #f1d4ab;
+  background: rgba(132, 89, 41, 0.26);
+}
+
+.trace-chevron {
+  color: #9fb0aa;
+  transition: transform 160ms ease;
+}
+
+.trace-panel.is-open .trace-chevron {
+  transform: rotate(180deg);
+}
+
+.trace-details {
+  padding: 0 20px 20px;
+}
+
+.panel-heading,
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.panel-heading .section-title,
+.drawer-header .section-title {
+  margin-bottom: 0;
 }
 
 .section-title {
@@ -321,6 +408,49 @@ textarea::placeholder {
   box-shadow:
     inset 8px 8px 18px rgba(0, 0, 0, 0.34),
     inset -6px -6px 14px rgba(71, 83, 78, 0.12);
+}
+
+.thinking-panel {
+  max-height: 620px;
+  overflow: auto;
+  padding: 16px;
+  border: 1px solid rgba(174, 201, 191, 0.1);
+  border-radius: 18px;
+  color: #b7c9c2;
+  background: rgba(10, 13, 12, 0.54);
+  line-height: 1.55;
+  white-space: pre-wrap;
+  box-shadow:
+    inset 8px 8px 18px rgba(0, 0, 0, 0.32),
+    inset -6px -6px 14px rgba(71, 83, 78, 0.1);
+}
+
+.ghost-button,
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(174, 201, 191, 0.12);
+  color: #c8d9d2;
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow:
+    6px 7px 16px rgba(0, 0, 0, 0.24),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+}
+
+.ghost-button {
+  gap: 8px;
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.icon-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
 }
 
 .loading-block,
@@ -412,6 +542,29 @@ textarea::placeholder {
 .product-list {
   display: grid;
   gap: 16px;
+}
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(3, 5, 5, 0.42);
+  backdrop-filter: blur(6px);
+}
+
+.products-drawer {
+  width: min(560px, 100%);
+  height: 100vh;
+  padding: 22px;
+  overflow: auto;
+  border-left: 1px solid rgba(174, 201, 191, 0.16);
+  background: rgba(24, 30, 28, 0.84);
+  box-shadow:
+    -24px 0 55px rgba(0, 0, 0, 0.46),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(26px);
 }
 
 .product-card {
@@ -510,9 +663,12 @@ textarea::placeholder {
     padding: 18px 16px 238px;
   }
 
-  .hero-band,
-  .results-grid {
+  .hero-band {
     grid-template-columns: 1fr;
+  }
+
+  .header-actions {
+    justify-content: flex-start;
   }
 
   .composer-row {
@@ -522,6 +678,10 @@ textarea::placeholder {
   .status-pill,
   .search-button {
     width: 100%;
+  }
+
+  .header-actions .status-pill {
+    width: auto;
   }
 
   .search-button {

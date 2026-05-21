@@ -49,14 +49,14 @@ def search(request: SearchRequest):
     try:
         _, metadata_trace = extract_metadata_filters(query)
         top_products = retrieve_products(query, metadata_trace, top_k=10)
-        answer = generate_answer(query, top_products)
+        answer_payload = generate_answer(query, top_products)
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 
     return SearchResponse(
         query=query,
-        answer=answer,
+        answer=answer_payload["answer"],
+        thinking=answer_payload.get("thinking"),
         metadata_trace=metadata_trace,
         top_products=top_products,
     )
-

@@ -4,6 +4,7 @@ import {
   Boxes,
   BrainCircuit,
   Filter,
+  X,
   Loader2,
   PackageSearch,
   Search,
@@ -29,6 +30,7 @@ function App() {
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isProductPanelOpen, setIsProductPanelOpen] = useState(false);
 
   const products = result?.top_products || [];
   const trace = result?.metadata_trace;
@@ -81,9 +83,20 @@ function App() {
           <h1>Metadata-aware product search</h1>
         </div>
 
-        <div className="status-pill" aria-live="polite">
-          {isLoading ? <Loader2 className="spin" size={18} aria-hidden="true" /> : <Sparkles size={18} aria-hidden="true" />}
-          {statusText}
+        <div className="header-actions">
+          <div className="status-pill" aria-live="polite">
+            {isLoading ? <Loader2 className="spin" size={18} aria-hidden="true" /> : <Sparkles size={18} aria-hidden="true" />}
+            {statusText}
+          </div>
+          <button
+            className="status-pill products-trigger"
+            type="button"
+            disabled={products.length === 0}
+            onClick={() => setIsProductPanelOpen(true)}
+          >
+            <Boxes size={18} aria-hidden="true" />
+            {products.length > 0 ? `${products.length} products` : "Products"}
+          </button>
         </div>
       </section>
 
@@ -105,39 +118,56 @@ function App() {
 
       <section className="results-grid">
         <div className="answer-column">
-          <AnswerPanel answer={result?.answer} isLoading={isLoading} />
           <TracePanel trace={trace} isLoading={isLoading} />
-        </div>
-
-        <div className="products-column">
-          <div className="section-title">
-            <Boxes size={20} aria-hidden="true" />
-            <h2>Retrieved Products</h2>
-          </div>
-
-          {isLoading ? (
-            <div className="loading-block products-loading">
-              <Loader2 className="spin" size={26} aria-hidden="true" />
-              <span>Retrieving products</span>
-            </div>
-          ) : products.length === 0 ? (
-            <div className="empty-panel">
-              <Filter size={22} aria-hidden="true" />
-              <span>No products loaded yet.</span>
-            </div>
-          ) : (
-            <div className="product-list">
-              {products.map((product, index) => (
-                <ProductCard
-                  key={`${product.product_uid}-${product.source}`}
-                  product={product}
-                  rank={index + 1}
-                />
-              ))}
-            </div>
-          )}
+          <AnswerPanel answer={result?.answer} thinking={result?.thinking} isLoading={isLoading} />
         </div>
       </section>
+
+      {isProductPanelOpen && (
+        <div
+          className="drawer-backdrop"
+          role="presentation"
+          onClick={() => setIsProductPanelOpen(false)}
+        >
+          <aside
+            className="products-drawer"
+            aria-label="Retrieved products"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="drawer-header">
+              <div className="section-title">
+                <Boxes size={20} aria-hidden="true" />
+                <h2>Retrieved Products</h2>
+              </div>
+              <button
+                className="icon-button"
+                type="button"
+                onClick={() => setIsProductPanelOpen(false)}
+                aria-label="Close products panel"
+              >
+                <X size={18} aria-hidden="true" />
+              </button>
+            </div>
+
+            {products.length === 0 ? (
+              <div className="empty-panel">
+                <Filter size={22} aria-hidden="true" />
+                <span>No products loaded yet.</span>
+              </div>
+            ) : (
+              <div className="product-list">
+                {products.map((product, index) => (
+                  <ProductCard
+                    key={`${product.product_uid}-${product.source}`}
+                    product={product}
+                    rank={index + 1}
+                  />
+                ))}
+              </div>
+            )}
+          </aside>
+        </div>
+      )}
 
       <section className="search-band">
         <form className="search-console" onSubmit={runSearch}>
