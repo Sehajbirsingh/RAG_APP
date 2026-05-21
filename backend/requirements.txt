@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+pandas
+numpy
+requests
+langchain
+langchain-ollama
+pydantic
