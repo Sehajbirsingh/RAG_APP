@@ -103,8 +103,8 @@ button {
 }
 
 .products-trigger:disabled {
-  cursor: not-allowed;
-  opacity: 0.55;
+  cursor: default;
+  opacity: 1;
 }
 
 .search-band {
@@ -264,6 +264,16 @@ textarea::placeholder {
   background: rgba(94, 32, 30, 0.54);
 }
 
+.conversation-stack {
+  display: grid;
+  gap: 26px;
+}
+
+.turn-block {
+  display: grid;
+  gap: 18px;
+}
+
 .submitted-query {
   display: grid;
   grid-template-columns: 42px minmax(0, 1fr);
@@ -272,6 +282,11 @@ textarea::placeholder {
   max-width: 920px;
   margin: 0 0 22px auto;
   padding: 15px;
+}
+
+.start-panel {
+  max-width: 980px;
+  margin: 40px auto 0;
 }
 
 .query-avatar {
@@ -423,6 +438,13 @@ textarea::placeholder {
   box-shadow:
     inset 8px 8px 18px rgba(0, 0, 0, 0.32),
     inset -6px -6px 14px rgba(71, 83, 78, 0.1);
+}
+
+.answer-time {
+  margin-top: 8px;
+  color: #7f918a;
+  font-size: 0.78rem;
+  text-align: right;
 }
 
 .ghost-button,

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   AlertCircle,
   Boxes,
@@ -26,20 +26,23 @@ const examples = [
 
 function App() {
   const [query, setQuery] = useState("");
-  const [submittedQuery, setSubmittedQuery] = useState("");
-  const [result, setResult] = useState(null);
-  const [error, setError] = useState("");
+  const [searchTurns, setSearchTurns] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isProductPanelOpen, setIsProductPanelOpen] = useState(false);
+  const conversationEndRef = useRef(null);
 
-  const products = result?.top_products || [];
-  const trace = result?.metadata_trace;
+  const latestTurn = searchTurns[searchTurns.length - 1];
+  const latestProducts = latestTurn?.result?.top_products || [];
 
   const statusText = useMemo(() => {
     if (isLoading) return "Searching";
-    if (result) return `${products.length} products`;
+    if (latestProducts.length > 0) return `${latestProducts.length} products`;
     return "Ready";
-  }, [isLoading, products.length, result]);
+  }, [isLoading, latestProducts.length]);
+
+  useEffect(() => {
+    conversationEndRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  }, [searchTurns.length, isLoading]);
 
   async function runSearch(event) {
     event?.preventDefault();
@@ -47,10 +50,21 @@ function App() {
     if (!cleanQuery) return;
 
     setIsLoading(true);
-    setError("");
-    setSubmittedQuery(cleanQuery);
-    setResult(null);
+    setIsProductPanelOpen(false);
     setQuery("");
+    const turnId = `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    const startedAt = performance.now();
+    setSearchTurns((turns) => [
+      ...turns,
+      {
+        id: turnId,
+        query: cleanQuery,
+        result: null,
+        error: "",
+        elapsedMs: null,
+        isLoading: true,
+      },
+    ]);
 
     try {
       const response = await fetch(`${API_BASE_URL}/search`, {
@@ -64,9 +78,31 @@ function App() {
         throw new Error(data.detail || "Search failed.");
       }
 
-      setResult(data);
+      setSearchTurns((turns) =>
+        turns.map((turn) =>
+          turn.id === turnId
+            ? {
+                ...turn,
+                result: data,
+                elapsedMs: performance.now() - startedAt,
+                isLoading: false,
+              }
+            : turn
+        )
+      );
     } catch (searchError) {
-      setError(searchError.message);
+      setSearchTurns((turns) =>
+        turns.map((turn) =>
+          turn.id === turnId
+            ? {
+                ...turn,
+                error: searchError.message,
+                elapsedMs: performance.now() - startedAt,
+                isLoading: false,
+              }
+            : turn
+        )
+      );
     } finally {
       setIsLoading(false);
     }
@@ -84,43 +120,63 @@ function App() {
         </div>
 
         <div className="header-actions">
-          <div className="status-pill" aria-live="polite">
-            {isLoading ? <Loader2 className="spin" size={18} aria-hidden="true" /> : <Sparkles size={18} aria-hidden="true" />}
-            {statusText}
-          </div>
           <button
             className="status-pill products-trigger"
             type="button"
-            disabled={products.length === 0}
+            disabled={latestProducts.length === 0}
             onClick={() => setIsProductPanelOpen(true)}
+            aria-live="polite"
           >
-            <Boxes size={18} aria-hidden="true" />
-            {products.length > 0 ? `${products.length} products` : "Products"}
+            {isLoading ? (
+              <Loader2 className="spin" size={18} aria-hidden="true" />
+            ) : latestProducts.length > 0 ? (
+              <Boxes size={18} aria-hidden="true" />
+            ) : (
+              <Sparkles size={18} aria-hidden="true" />
+            )}
+            {statusText}
           </button>
         </div>
       </section>
 
-      {error && (
-        <section className="error-panel" role="alert">
-          <AlertCircle size={20} aria-hidden="true" />
-          <span>{error}</span>
-        </section>
-      )}
-
-      {submittedQuery && (
-        <section className="submitted-query" aria-label="Submitted query">
-          <div className="query-avatar">
-            <User size={18} aria-hidden="true" />
+      <section className="conversation-stack">
+        {searchTurns.length === 0 ? (
+          <div className="empty-panel start-panel">
+            <Search size={22} aria-hidden="true" />
+            <span>Start with a retail product question.</span>
           </div>
-          <p>{submittedQuery}</p>
-        </section>
-      )}
+        ) : (
+          searchTurns.map((turn) => (
+            <article className="turn-block" key={turn.id}>
+              <section className="submitted-query" aria-label="Submitted query">
+                <div className="query-avatar">
+                  <User size={18} aria-hidden="true" />
+                </div>
+                <p>{turn.query}</p>
+              </section>
 
-      <section className="results-grid">
-        <div className="answer-column">
-          <TracePanel trace={trace} isLoading={isLoading} />
-          <AnswerPanel answer={result?.answer} thinking={result?.thinking} isLoading={isLoading} />
-        </div>
+              {turn.error && (
+                <section className="error-panel" role="alert">
+                  <AlertCircle size={20} aria-hidden="true" />
+                  <span>{turn.error}</span>
+                </section>
+              )}
+
+              <section className="results-grid">
+                <div className="answer-column">
+                  <TracePanel trace={turn.result?.metadata_trace} isLoading={turn.isLoading} />
+                  <AnswerPanel
+                    answer={turn.result?.answer}
+                    thinking={turn.result?.thinking}
+                    isLoading={turn.isLoading}
+                    elapsedMs={turn.elapsedMs}
+                  />
+                </div>
+              </section>
+            </article>
+          ))
+        )}
+        <div ref={conversationEndRef} />
       </section>
 
       {isProductPanelOpen && (
@@ -149,14 +205,14 @@ function App() {
               </button>
             </div>
 
-            {products.length === 0 ? (
+            {latestProducts.length === 0 ? (
               <div className="empty-panel">
                 <Filter size={22} aria-hidden="true" />
                 <span>No products loaded yet.</span>
               </div>
             ) : (
               <div className="product-list">
-                {products.map((product, index) => (
+                {latestProducts.map((product, index) => (
                   <ProductCard
                     key={`${product.product_uid}-${product.source}`}
                     product={product}

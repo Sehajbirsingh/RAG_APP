@@ -1,0 +1,168 @@
+
+You are a retail product recommendation assistant.
+
+Your job is to answer the user's query using ONLY the retrieved product records provided below.
+
+The user's intent can be:
+1. A product recommendation request
+2. A general product question
+3. A suitability check, such as "is this good for X?"
+4. A comparison between retrieved products
+
+Treat these as hard constraints when clearly stated, which could include something like:
+- product type
+- material
+- size or dimensions
+- application/use case
+- indoor/outdoor use
+- installation type
+- capacity/power/technical requirement
+- brand, if mentioned
+- color/finish, if mentioned
+
+Important:
+If the user says "something similar to", "like", "close to", "alternative to", "good for", "preferably", or uses flexible wording, treat that requirement as a soft preference, not a strict hard constraint.
+
+Hard constraints override similarity score.
+Soft preferences guide the recommendation but should not automatically reject a product.
+
+If a product violates a clearly stated hard constraint, do not recommend it as the best match.
+If no retrieved product satisfies all hard constraints, say that clearly and recommend the closest available option only if it is still useful.
+
+Do not invent product details.
+Do not use outside knowledge.
+If the retrieved data does not mention something, say it is unclear.
+The final answer must not include hidden reasoning, analysis notes, or <think> tags.
+
+Retrieved products:
+Product 1
+Product UID: 130530
+Title: Pfister Bernini 4 in. Centerset Single-Handle Bathroom Faucet in Polished Chrome
+Matched Source: description
+Similarity Score: 0.8015
+
+Description:
+This Pfister Bernini 4 in. Centerset 1-Handle Bathroom Faucet in Polished Chrome features a refreshing aesthetic designed for the modern bath or powder room, finished in chrome to make this fixture shine. The single-handle setup offers smooth operation to provide more precise temperature control.Single-handle setup delivers effortless functionality1 or 3 hole installation, with optional deck plate includedMid-arc spout provides optimal clearance for cleaning and useChrome finish lends added durability to make cleanup a breezePforever Seal advanced ceramic disc valve technology with a never leak guaranteeMeets or exceeds EPA WaterSense Standards, which reduces water consumption by 30% and helps average households save up to $200 in their annual water billADA Compliant designMeets NSF low lead standardsPush & Seal drain requires no tools and installs in less than half the time of a standard pop-up drain; guaranteed tight seal each and every use - simply press to seal and again to openADA CompliantPforever Warranty covers finish and function for life
+
+---
+
+Product 2
+Product UID: 186115
+Title: Sheffield Home 16 in. W x 30 in. H Vanity in Classic Black with Resin Vanity Top in White
+Matched Source: description
+Similarity Score: 0.7985
+
+Description:
+The BF103B wall-mounted vanity set adds modern styling to any bathroom space. Its size is ideal for smaller bathrooms. Free Standing vanity eliminates the need to drill into walls and makes installation a breeze. The resin basin provides ample space due to the side faucet mounting location. The ebony wood grain finished cabinet offers a rich feel and excellent contrast.16.6 in. W x 10 in. D provides excellent storage for bathrooms with limited spaceBasin has single hole faucet opening that can be mounted on right or left side, full width, single door storage for sleek modern lookVanity top is pre-drilled for easy installation of a single center hole faucet - faucet sold separatelyIncludes brushed nickel cabinet hardwareTempered resin vanity top provides excellent durability and water resistanceDecorative modern-style vanity gives your bathroom an elegant contemporary lookFull width, single door storageSoft-close door hinges prevents slamming and protects fingersCabinet is fully assembled for easy installationMDF construction offers excellent strength and durabilityRequires single hole low arc faucetFaucet and drain not included
+
+---
+
+Product 3
+Product UID: 188316
+Title: Foremost Ellis 15-1/2 in. W x 7-7/8 in. D Vanity in Dark Walnut with Porcelain Vanity Top in White
+Matched Source: description
+Similarity Score: 0.7973
+
+Description:
+Make a bold, modern statement with the Foremost Ellis Vanity in Dark Walnut with Porcelain Vanity Top. Perfect for smaller bathrooms, this wall mounted vanity is durably constructed with solid wood, natural wood veneers and clean, low-emission engineered wood and features a single door storage cabinet with a decorative groove pattern. The white, rectangular porcelain sink top has a small round basin, is pre-drilled for a single faucet and has below, a clear glass shelf on a stainless steel accent that has ample space for towels and other items. Suitable for contemporary or modern decor, this vanity is as visually striking as it is functional and is fully assembled for quick and easy installation. Pair with the matching Ellis mirror for a polished look.15-1/2 in. W x 7-7/8 in. D is the perfect size for a small bathroom or powder roomIncludes rectangular white porcelain top with a small, white vitreous china basinVanity top is pre-drilled for a single hole faucet; faucet sold separatelyVanity top is stain, acid and abrasion resistant for lasting beautySturdy construction with solid wood, natural wood veneers and clean low-emission engineered woodModern design with decorative groove pattern and dark walnut finish is ideal for contemporary decorExterior tempered glass shelf, stainless steel towel box and substantial interior cabinet offer ample space for bathroom essentialsConcealed and adjustable hinges are mounted on the right side of the cabinet and provide a clean, seamless lookCarved finger pull on door complements the modern designWall mount design frees-up floor spaceFully assembled for easy installationRequires single hole faucet
+
+---
+
+Product 4
+Product UID: 210439
+Title: Home Decorators Collection Wellington 32 in. Vanity in Distressed White with Granite Vanity Top in Black
+Matched Source: description
+Similarity Score: 0.7951
+
+Description:
+Updating your bathroom can be as simple as putting in a beautiful new bath vanity packed with storage and style. Visualize our Wellington Single Vanity with its smooth granite top in your guest bath or powder room. Richly detailed with rounded, ribbed corners, tapering legs, an applique design on its faux drawer and zinc alloy drawer pulls in an alluring bronze finish, this 2-drawer bathroom vanity cabinet stands for functional elegance. Crafted of real granite, the bath vanity top may contain swirling or veining which are part of the natural beauty of stone and have no effect on function or durability.Black granite topTop is pre-drilled for your faucetWhite under-mount vitreous china sink1 faux drawer and 2 working drawers with full extension ball bearing glidesZinc alloy drawer pulls in bronze finishAdjustable leg levelers35 in. H x 32 in. W x 22 in. DFaucet and drain not includedAssembly requiredInstructions on removing drawers is included
+
+---
+
+Product 5
+Product UID: 218786
+Title: GROHE Concetto Single Hole 1-Handle Low-Arc Bathroom Faucet in Brushed Nickel-DISCONTINUED
+Matched Source: description
+Similarity Score: 0.7949
+
+Description:
+Use the GROHE Concetto Single Hole 1-Handle Low-Arc Bathroom Faucet in Brushed Nickel to spruce up a drab bath or powder room with a brushed nickel finish and sleek design. The single-handle, ADA-compliant fixture operates smoothly and rises to meet your needs. Ceramic disk valving offers drip-free performance for water-efficient functionality.Single-handle setup delivers effortless functionalityLow-arc spout offers a compact designSolid brass construction is built to lastBrushed nickel finish lends added durability to make cleanup a breezeSilkMove ceramic disk cartridge helps ensure leak-free performanceADA-compliant lever handleIncludes stainless-steel braided flexible supplies and drain
+
+---
+
+Product 6
+Product UID: 124571
+Title: Sheffield Home 16.6 in. Vanity in Black with Tempered Glass Vanity Top in Clear Frosted
+Matched Source: description
+Similarity Score: 0.7926
+
+Description:
+The BF101 wall-mounted vanity set adds modern styling to any bathroom space. Its size is ideal for smaller bathrooms. Wall mounting provides flexibility to hang and different heights. The glass basin provides ample space due to the side faucet mounting location. The ebony wood grain finished cabinet offers a rich feel and excellent contrast.16.6 in. W x 10 in. D provides excellent storage for bathrooms with limited spaceBasin has single hole faucet opening that can be mounted on right or left side, full width, single door storage for sleek modern lookVanity top is pre-drilled for easy installation of a single center hole faucet - faucet sold separatelyIncludes brushed nickel cabinet hardwareTempered glass vanity top provides excellent durability and water resistanceDecorative modern-style vanity gives your bathroom a elegant contemporary lookFull width, single door storageSoft-close door hinges prevents slamming and protects fingersCabinet is fully assembled for easy installationMDF construction offers excellent strength and durabilityRequires single hole low arc faucetFaucet and drain not included
+
+---
+
+Product 7
+Product UID: 196134
+Title: Bellaterra Home Midlands R 39 in. Single Vanity in Black with Porcelain Vanity Top in White
+Matched Source: description
+Similarity Score: 0.7920
+
+Description:
+Satisfy your home design needs with this black finished vanity offering a contemporary smart design with plenty of storage space and traditional features. The modern bathroom vanity is constructed of solid wood. Features include an oversized white ceramic sink and counter-top and modern chrome accents. The style and beauty of the vanity is an exquisite design for a bathroom. Dimension: 39 in. W x 19 in. D x 35 in. H. Birch, Black, White Ceramic, White Ceramic Sink, Brush Nickel finish hardware and leg caps. Pre-drilled with 1 hole - One slot faucet, faucet and mirror not included. Slight assembly required.Wood cabinet, no MDF or particle boardSoft close hingesFull extension drawer glidesFurniture grade semi-closing water proof wood finish protects against bathroom humidityFaucet not includedIntegrated sink with counter topSink material: ceramicSink shape: ovalSlight assembly requiredMeasurement tolerance: (+/- 1/2 in.)Made in China1 year manufacture warranty against defects - parts
+
+---
+
+Product 8
+Product UID: 176155
+Title: Delta Trinsic Wall-Mount Single-Handle Low-Arc Bathroom Faucet in Venetian Bronze
+Matched Source: description
+Similarity Score: 0.7885
+
+Description:
+Sleek, minimalistic design makes this Trinsic Wall Mount 1-Handle Low Arc Bathroom Faucet in Venetian Bronze the perfect complement to today's modern home. Wall-mount faucets like this one offer a convenient way to save counter space without sacrificing style and functionality. Getting ready in the morning is far from routine when you are surrounded by a bath that reflects your personal style. You can buy with confidence, knowing that Delta backs this faucet with a lifetime limited warranty.WaterSense certified to promote water conservationADA-compliant lever handle provides precise temperature and volume controlMatching finish spring-loaded pop-up included with drain plugLifetime limited warranty covers parts and finish defects
+
+---
+
+Product 9
+Product UID: 180875
+Title: stufurhome Newport 48 in. W x 22 in. D Vanity in Gray with Marble Vanity Top in Carrara White and Mirror
+Matched Source: description
+Similarity Score: 0.7882
+
+Description:
+Add a tinge of contemporary charm to your bathroom by installing the  Newport Grey 48 inch Single Sink Bathroom Vanity by Stufurhome. This visually-appealing vanity in grey is constructed using the finest-grade solid wood that assures years of durability and strength. An undermount porcelain basin is charmingly topped over a smooth and glistening carrara white marble top that comes pre-drilled for installation of a three-hole faucet. Nine functional pull-out drawers and cabinet lend a storage area that is spacious enough to house everyday bathroom toiletries. Brushed nickel hardware gives a classy finishing touch to this vanity, while soft-closing door hinges ensure that you never get to hear any door slamming. The look of this vanity is further refined by complementing it harmoniously with a matching wood-framed mirror.Solid wood constructionRectangular under-mount porcelain basinDTC soft-closing drawersBrushed nickel hardwareCarrara white marble top9 functional drawersThree (3) pre-drilled faucet holesWood framed mirrorBacksplash included, faucet not included, accessories not included
+
+---
+
+Product 10
+Product UID: 144680
+Title: Delta Classic Single-Handle Kitchen Faucet in Chrome
+Matched Source: description
+Similarity Score: 0.7868
+
+Description:
+The Delta Classic single-handle kitchen faucet in chrome has clean styling and simple lines for a practical, elegant appearance. The chrome finish can create a bright, modern accent for almost any kitchen. This faucet has a single lever handle for ease of use. The solid brass construction helps ensure reliable, long-lasting use. This ADA-compliant faucet comes with supply lines for installation.Chrome finish creates a bright, modern lookSolid brass construction for reliable, long-lasting performanceSingle lever handle for ease of controlClassic design can install easily in single-hole sinksSpout swivels up to 360 for full-sink accessDelta diamond seal technology helps provide virtually pure water delivery systemInnoFlex waterways are cross linked with an electron beam to help eliminate unpleasant odors or tasteADA compliantIncludes handle and supply lines for installation
+
+User query:
+I’m renovating a small basement bathroom and I need something that can work as a clean-looking vanity faucet. Ideally I want a brushed nickel or chrome finish because the rest of the hardware is silver-toned, and I’d prefer something that feels durable and easy to install without needing a super complicated setup. It does not have to be the most expensive option, but I want something that looks modern, works well for everyday use, and would fit a simple residential bathroom sink replacement.
+
+First, identify the user's intent from the User query text immediately above.
+
+Respond in this structure:
+
+1. Best answer:
+- Give the direct answer or best product recommendation.
+
+2. Why this fits:
+- Explain using evidence from the retrieved product description and attributes.
+
+3. Requirement check:
+- List the main hard constraints and soft preferences from the user query.
+- Mark each as satisfied, missing, unclear, or partially matched.
+
+4. Other relevant options:
+- Mention up to 2 alternatives if useful.
+- Explain briefly why they are weaker or different.
+
+5. Final recommendation:
+- Give a short plain-language final suggestion.

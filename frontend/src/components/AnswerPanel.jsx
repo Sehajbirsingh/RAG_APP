@@ -31,9 +31,24 @@ function splitThinking(answer, thinking) {
   };
 }
 
-function AnswerPanel({ answer, thinking, isLoading }) {
+function formatElapsedTime(milliseconds) {
+  if (!milliseconds && milliseconds !== 0) return "";
+
+  const totalSeconds = Math.max(1, Math.round(milliseconds / 1000));
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+
+  if (minutes > 0) {
+    return `${minutes}m ${seconds}s`;
+  }
+
+  return `${seconds}s`;
+}
+
+function AnswerPanel({ answer, thinking, isLoading, elapsedMs }) {
   const [showThinking, setShowThinking] = useState(false);
   const { cleanAnswer, thinkingText } = splitThinking(answer, thinking);
+  const elapsedTime = formatElapsedTime(elapsedMs);
 
   return (
     <section className="answer-panel">
@@ -69,6 +84,7 @@ function AnswerPanel({ answer, thinking, isLoading }) {
           ) : (
             <div className="answer-text">{cleanAnswer}</div>
           )}
+          {elapsedTime && <div className="answer-time">{elapsedTime}</div>}
         </>
       ) : (
         <div className="empty-panel">

@@ -1,18 +1,19 @@
 import os
+from pathlib import Path
 
 import requests
 
 
 OLLAMA_GENERATE_URL = os.getenv("OLLAMA_GENERATE_URL", "http://localhost:11434/api/generate")
 ANSWER_MODEL = os.getenv("ANSWER_MODEL", "qwen3:4b")
+LAST_PROMPT_PATH = Path(__file__).with_name("last_llm_prompt.txt")
 
 
 def format_retrieved_products(products: list[dict]) -> str:
     blocks = []
 
     for index, product in enumerate(products, start=1):
-        description_text = product.get("description_text") or ""
-        attribute_text = product.get("attribute_text") or "No attribute data available."
+        description_text = product.get("description_text") or "No description available."
 
         block = f"""
 Product {index}
@@ -23,9 +24,6 @@ Similarity Score: {product.get("score", 0):.4f}
 
 Description:
 {description_text}
-
-Attributes:
-{attribute_text}
 """
         blocks.append(block.strip())
 
@@ -38,23 +36,13 @@ def build_answer_prompt(query: str, products: list[dict]) -> str:
     return f"""
 You are a retail product recommendation assistant.
 
-Your job is to answer the exact user query below using ONLY the retrieved product records provided.
+Your job is to answer the user's query using ONLY the retrieved product records provided below.
 
-USER QUERY:
-\"\"\"
-{query}
-\"\"\"
-
-RETRIEVED PRODUCT RECORDS:
-{retrieved_products_text}
-
-The user query may be:
+The user's intent can be:
 1. A product recommendation request
 2. A general product question
 3. A suitability check, such as "is this good for X?"
 4. A comparison between retrieved products
-
-First, identify the user's intent.
 
 Treat these as hard constraints when clearly stated, which could include something like:
 - product type
@@ -79,8 +67,15 @@ If no retrieved product satisfies all hard constraints, say that clearly and rec
 Do not invent product details.
 Do not use outside knowledge.
 If the retrieved data does not mention something, say it is unclear.
-Do not say that the user query is missing; the user query is provided above inside USER QUERY.
 The final answer must not include hidden reasoning, analysis notes, or <think> tags.
+
+Retrieved products:
+{retrieved_products_text}
+
+User query:
+{query}
+
+First, identify the user's intent from the User query text immediately above.
 
 Respond in this structure:
 
@@ -101,6 +96,10 @@ Respond in this structure:
 5. Final recommendation:
 - Give a short plain-language final suggestion.
 """
+
+
+def save_last_prompt(prompt: str) -> None:
+    LAST_PROMPT_PATH.write_text(prompt, encoding="utf-8")
 
 
 def split_answer_and_thinking(text: str, thinking: str | None = None) -> dict[str, str | None]:
@@ -129,11 +128,14 @@ def generate_answer(query: str, products: list[dict]) -> dict[str, str | None]:
             "thinking": None,
         }
 
+    prompt = build_answer_prompt(query, products)
+    save_last_prompt(prompt)
+
     response = requests.post(
         OLLAMA_GENERATE_URL,
         json={
             "model": ANSWER_MODEL,
-            "prompt": build_answer_prompt(query, products),
+            "prompt": prompt,
             "stream": False,
             "think": True,
             "options": {
