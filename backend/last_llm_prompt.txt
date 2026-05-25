@@ -36,60 +36,60 @@ The final answer must not include hidden reasoning, analysis notes, or <think> t
 
 Retrieved products:
 Product 1
-Product UID: 221029
-Title: 24 in. L Decorative White 4-Peg Wall Mount Wood Rack
+Product UID: 167346
+Title: Jaki Jorg Miterless 4 in. x 4 in. Untreated Wood Traditional Flat Slip Over Fence Post Cap
 Matched Source: description
-Similarity Score: 0.7552
+Similarity Score: 0.7510
 
 Description:
-Upgrade your storage options with Spectrums Wall Mount 4-Peg Wood Rack. This wall mounted piece creates a functional and tasteful way to hang and store your coats, hats, purses and more. Crafted from all-natural wood. It will look great in your hallway, mudroom or closet.Hang and store your hats, coats, purses and moreEasily mounts to walls with included hardwareAll-natural wood constructionGreat for entryway, closet and garage use
+Give your fence the protection it deserves with Slip Over Miterless Wood Post Caps. Fitting atop fence posts measuring 3-3/4 in. to 3-7/8 in., the stylish mahogany base prolongs the life of any fence post by guarding against rain and the elements. The one piece joint less design features a Traditional style trim and no staples or glue. The advantage of Miterless post caps, versus others with joints at the corners, is evident in the prolonged life of your deck and fence posts. Less water gets underneath the cap and into the top of your post making our Miterless products a necessity for any deck or fence. The one-piece flat cap is ready for weather treating to maximize protection, or controlled exposure for rustic appeal. Most effective when mounted with glue, the post cap installs easily and adds style to your yard while helping your fence last a lifetime.California residents: see&nbsp;Proposition 65 informationMahogany hard wood base withstands extreme weather better than pressure treated pine or cedarNatural wood grain, mahogany/cedar colorCan be left natural, stained, or paintedRouted bottom is constructed without miter joints which means never splitting apart at the cornersFits posts measuring 3-3/4 in. to 3-7/8 in. in actual sizeAll post caps, whether hard wood or metal, will provide a lifetime of protection from weathering and deteriorationAll post caps slip over the top of the post for easy installationMounting with liquid nail recommended
 
 ---
 
 Product 2
-Product UID: 195815
-Title: Zenith Slimline 16 in. W Rolling Floor Wood Storage Shelf in White
+Product UID: 213297
+Title: Jaki Jorg Miterless 4 in. x 6 in. Untreated Mahogany Copper Pyramid Slip Over Fence Post Cap
 Matched Source: description
-Similarity Score: 0.7238
+Similarity Score: 0.7475
 
 Description:
-If you are searching for a versatile, maneuverable bathroom storage unit to fit into tight bathroom areas, look no further than the Zenith Slimline Rolling Floor Wood Storage Shelf in White. This attractive, space-saving organizer helps organize bathroom necessities and reduce clutter in a convenient rolling design. A white finish, decorative top and wainscot design on the front panel give this unit its distinctive charm. With a slim design to fit easily in narrow spaces, the unit features two large shelves that hold a wide array of bathroom products, while the easy-glide wheels offer quick, easy access to the shelves. Durable wood construction is strong enough to hold even your larger bathroom products.16 in. W x 26 in. H x 8 in. D, compact enough for small spacesWhite wood construction offers durable support and cleans easily with a damp clothTwo fixed shelves and a decorative chrome towel bar provide storage in the area between vanity and toiletShelf rails and dividers assist in organizing and separating your toiletriesSlim design fits easily into small bathroom areasDecorative top and wainscot design offer a unique, elegant appeal
+Give your fence the protection it deserves with Slip Over Miterless Wood Post Caps. Fitting atop fence posts measuring 3-1/2 in. to 5-1/2 in., the stylish mahogany base prolongs the life of any fence post by guarding against rain and the elements. The one piece joint-less design features a New England style trim and no staples or glue. The advantage of Miterless post caps is evident in the prolonged life of fence posts and caps. Outfitted with a 100% copper pyramid, caps are ready for weather treating to maximize protection, or controlled exposure for rustic appeal. Most effective when mounted with glue, the post cap installs easily and adds style to your yard while helping your fence last a lifetime.California residents: see&nbsp;Proposition 65 informationMahogany hard wood base withstands extreme weather better than pressure treated pine or cedar. Metal pyramid adds further protection from rain and natural damageNatural wood grain, mahogany/cedar color, West Indies trim, 100% copper finishWood base can be left natural, stained, or painted. Pyramid can be treated to preserve original sheen, or left to patina naturallyRouted bottom is constructed without miter joints which means never splitting apart at the cornersFits posts measuring 3-1/2 in. by 5-1/2 in. in actual sizeAll post caps slip over the top of the post for easy installationMounting with liquid nails construction adhesive recommendedCopper lid ships separately and requires assembly to wood base with liquid nail (not included)
 
 ---
 
 Product 3
-Product UID: 214689
-Title: Stratford 24 in. L Decorative 4-Double Hook Wall Mount Wood Rack in White with Satin Nickel Hook
-Matched Source: attribute
-Similarity Score: 0.7132
+Product UID: 140440
+Title: DeckoRail Verona 6 in. x 6 in. Copper Metal High Point Pyramid Post Cap
+Matched Source: description
+Similarity Score: 0.7469
 
 Description:
-Upgrade your storage options with the Stratford 4-Double Hook Wood Rack. This wall mounted piece creates a functional and tasteful way to hang and store your coats, hats, purses and more. Crafted from rustic wood and sturdy steel.Features 4-double hooksFunctional and stylish way to hang and store your coats, hats and pursesEasily mounts to walls with included hardwareConstructed of sturdy steel and all-natural wood
+Make your deck or fence extraordinary by adding unique post caps. This 6 in. x 6 in. Pressure-Treated Copper Pyramid High Point Post Cap lends a unique look to any deck, porch, fence, sign, mailbox or project. Treated to resist decay and termites, it's perfect for any outdoor application. And, these post caps are decorative as well as practical. They add a unique finishing touch and a timeless custom look. Plus, unmatched durability means you'll enjoy long-lasting performance.California residents: see&nbsp;Proposition 65 informationPost cap fits a nominal 6 in. x 6 in. wood post (Actual post dimensions 5-1/2 in. x 5-1/2 in.)Made of pressure-treated wood capped with elegant copperAdds a custom touch to your fence, deck or railingPyramid-shape designSuitable for residential or commercial useNote: Product may vary by store
 
 ---
 
 Product 4
-Product UID: 199764
-Title: Home Styles Three-Drawer 44 in. W White Buffet with Wood Top and Hutch
+Product UID: 169888
+Title: DeckoRail Pressure-Treated 6 in. x 6 in. Pine Copper Ball Top Post Cap
 Matched Source: description
-Similarity Score: 0.7121
+Similarity Score: 0.7441
 
 Description:
-Home Styles Large Server with Wood Top is constructed of hardwood and wood products in a white finish with a natural wood top. Features three utility drawers and two wood framed cabinet doors with an adjustable shelf for plenty of inside storage. Center wine storage area can be removed for open storage if desired. Hutch features two wood framed plexiglass doors with an adjustable shelf inside for plenty of storage. Center area with one shelf for additional storage or display. Brushed steel hardware. Size: 44 in. W x 17 in. D x 72.25 in. H.Solid hardwood in white finish with natural topThree drawers and two doors that open to adjustable shelf in each, open storage with removable 9 bottle wine rackHutch has two doors that open to adjustable shelf inside each, open storage in middle with adjustable shelf44 in. W x 17 in. D x 72.25 in. HProduct Questions Call us: (888) 680-7460 email us: servicedesk@homestyles-furniture.com need parts complete a parts request form online: http://www.homestyles-furniture.com/part_order_form.php
+Make your deck or fence extraordinary by adding unique post caps. This 6 in. x 6 in. Pressure-Treated Copper Ball Top Post Cap lends a unique look to any deck, porch, fence, sign, mailbox or project. Treated to resist decay and termites, it's perfect for any outdoor application. And, these post caps are decorative as well as practical. They add a unique finishing touch and a timeless custom look. Plus, unmatched durability means you'll enjoy long-lasting performance.California residents: see&nbsp;Proposition 65 informationPine constructionAttractive yet durable copper-plated steel finish helps keep posts safe from the elementsLow-maintenance, never needs painting or stainingPost cap fits nominal 6 in. x 6 in. wood post (Actual post dimensions 5-1/2 in. x 5-1/2 in.)Each box contain 1 post cap
 
 ---
 
 Product 5
-Product UID: 164063
-Title: ClosetMaid 48 in. x 19-1/2 in. Melamine Workbench Top in White
-Matched Source: attribute
-Similarity Score: 0.7085
+Product UID: 203010
+Title: Jaki Jorg Miterless 6 in. x 6 in. Untreated Wood Pyramid Slip Over Fence Post Cap
+Matched Source: description
+Similarity Score: 0.7432
 
 Description:
-Add a ClosetMaid 48 in. White Melamine Workbench Top to the Dimensions cabinets to create your own custom work area. Durable surface is resistant to scratches, chemicals and stains. Combine with base cabinets and wall cabinets (sold separately) to make more storage space in the garage, workshop or hobby area.Assembled size: 1 in. H x 48 in. W x 19-1/2 in. D50 lbs. weight capacityUV resistant, will not yellow in sunlightCleans with a damp cloth
+Give your fence the protection it deserves with Slip over Miterless Wood Post Caps. Fitting atop fence posts measuring 5-1/2 in. to 5-3/4 in., the stylish mahogany pyramid prolongs the life of any fence post by guarding against rain and the elements. Our one piece joint less design features a New England style trim and no staples or glue. The advantage of Miterless post caps, versus others with joints at the corners, is evident in the prolonged life of your deck and fence posts. Less water gets underneath the cap and into the top of your post making our Miterless products a necessity for any deck or fence. This one-piece pyramid cap is ready for weather treating to maximize protection or controlled exposure for rustic appeal. Most effective when mounted with glue, the post cap installs easily and adds style to your yard while helping your fence last a lifetime.California residents: see&nbsp;Proposition 65 informationMahogany hard wood base withstands extreme weather better than pressure treated pine or cedarNatural wood grain, mahogany/cedar colorCan be left natural, stained or paintedRouted bottom is constructed without miter joints which means never splitting apart at the cornersFits posts measuring 5-1/2 in. to 5-3/4 in. in actual sizeAll post caps, whether hard wood or metal, will provide a lifetime of protection from weathering and deteriorationAll post caps slip over the top of the post for easy installationMounting with liquid nail recommended
 
 User query:
-Looking for wood and white rack for organizing tools, supplies, or household items.
+I need a durable wooden corner post for an outdoor residential fence that can be painted or stained.
 
 First, identify the user's intent from the User query text immediately above.
 

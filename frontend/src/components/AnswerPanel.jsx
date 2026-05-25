@@ -45,6 +45,43 @@ function formatElapsedTime(milliseconds) {
   return `${seconds}s`;
 }
 
+function renderInlineMarkdown(text) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, index) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={index}>{part.slice(2, -2)}</strong>;
+    }
+
+    return part;
+  });
+}
+
+function renderAnswerMarkdown(text) {
+  return text
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line && !/^[-_]{3,}$/.test(line))
+    .map((line, index) => {
+      if (line.startsWith("## ")) {
+        return <h3 key={index}>{renderInlineMarkdown(line.slice(3))}</h3>;
+      }
+
+      if (line.startsWith("### ")) {
+        return <h4 key={index}>{renderInlineMarkdown(line.slice(4))}</h4>;
+      }
+
+      if (line.startsWith("- ")) {
+        return (
+          <div className="markdown-bullet" key={index}>
+            <span aria-hidden="true" />
+            <p>{renderInlineMarkdown(line.slice(2))}</p>
+          </div>
+        );
+      }
+
+      return <p key={index}>{renderInlineMarkdown(line)}</p>;
+    });
+}
+
 function AnswerPanel({ answer, thinking, isLoading, elapsedMs }) {
   const [showThinking, setShowThinking] = useState(false);
   const { cleanAnswer, thinkingText } = splitThinking(answer, thinking);
@@ -82,7 +119,7 @@ function AnswerPanel({ answer, thinking, isLoading, elapsedMs }) {
               {thinkingText || "No thinking trace was returned for this response. Restart the backend and run a new search if this result was generated before thinking capture was enabled."}
             </div>
           ) : (
-            <div className="answer-text">{cleanAnswer}</div>
+            <div className="answer-text answer-markdown">{renderAnswerMarkdown(cleanAnswer)}</div>
           )}
           {elapsedTime && <div className="answer-time">{elapsedTime}</div>}
         </>

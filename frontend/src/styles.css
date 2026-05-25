@@ -419,10 +419,58 @@ textarea::placeholder {
   color: #e7eee9;
   background: rgba(10, 13, 12, 0.44);
   line-height: 1.62;
-  white-space: pre-wrap;
   box-shadow:
     inset 8px 8px 18px rgba(0, 0, 0, 0.34),
     inset -6px -6px 14px rgba(71, 83, 78, 0.12);
+}
+
+.answer-markdown h3,
+.answer-markdown h4,
+.answer-markdown p {
+  margin: 0;
+}
+
+.answer-markdown h3 {
+  margin: 18px 0 8px;
+  color: #f3f8f5;
+  font-size: 1.08rem;
+  line-height: 1.25;
+}
+
+.answer-markdown h3:first-child {
+  margin-top: 0;
+}
+
+.answer-markdown h4 {
+  margin: 14px 0 6px;
+  color: #dceae4;
+  font-size: 0.98rem;
+}
+
+.answer-markdown p {
+  color: #dce7e2;
+}
+
+.answer-markdown strong {
+  color: #f2f7f4;
+  font-weight: 800;
+}
+
+.markdown-bullet {
+  display: grid;
+  grid-template-columns: 8px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  margin: 8px 0;
+}
+
+.markdown-bullet > span {
+  width: 6px;
+  height: 6px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: #8bd4be;
+  box-shadow: 0 0 12px rgba(139, 212, 190, 0.28);
 }
 
 .thinking-panel {
