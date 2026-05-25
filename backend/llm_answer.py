@@ -7,6 +7,7 @@ import requests
 OLLAMA_GENERATE_URL = os.getenv("OLLAMA_GENERATE_URL", "http://localhost:11434/api/generate")
 ANSWER_MODEL = os.getenv("ANSWER_MODEL", "qwen3:4b")
 LAST_PROMPT_PATH = Path(__file__).with_name("last_llm_prompt.txt")
+MAX_PRODUCTS_FOR_ANSWER = 5
 
 
 def format_retrieved_products(products: list[dict]) -> str:
@@ -128,7 +129,7 @@ def generate_answer(query: str, products: list[dict]) -> dict[str, str | None]:
             "thinking": None,
         }
 
-    prompt = build_answer_prompt(query, products)
+    prompt = build_answer_prompt(query, products[:MAX_PRODUCTS_FOR_ANSWER])
     save_last_prompt(prompt)
 
     response = requests.post(

@@ -36,115 +36,60 @@ The final answer must not include hidden reasoning, analysis notes, or <think> t
 
 Retrieved products:
 Product 1
-Product UID: 130530
-Title: Pfister Bernini 4 in. Centerset Single-Handle Bathroom Faucet in Polished Chrome
+Product UID: 221029
+Title: 24 in. L Decorative White 4-Peg Wall Mount Wood Rack
 Matched Source: description
-Similarity Score: 0.8015
+Similarity Score: 0.7552
 
 Description:
-This Pfister Bernini 4 in. Centerset 1-Handle Bathroom Faucet in Polished Chrome features a refreshing aesthetic designed for the modern bath or powder room, finished in chrome to make this fixture shine. The single-handle setup offers smooth operation to provide more precise temperature control.Single-handle setup delivers effortless functionality1 or 3 hole installation, with optional deck plate includedMid-arc spout provides optimal clearance for cleaning and useChrome finish lends added durability to make cleanup a breezePforever Seal advanced ceramic disc valve technology with a never leak guaranteeMeets or exceeds EPA WaterSense Standards, which reduces water consumption by 30% and helps average households save up to $200 in their annual water billADA Compliant designMeets NSF low lead standardsPush & Seal drain requires no tools and installs in less than half the time of a standard pop-up drain; guaranteed tight seal each and every use - simply press to seal and again to openADA CompliantPforever Warranty covers finish and function for life
+Upgrade your storage options with Spectrums Wall Mount 4-Peg Wood Rack. This wall mounted piece creates a functional and tasteful way to hang and store your coats, hats, purses and more. Crafted from all-natural wood. It will look great in your hallway, mudroom or closet.Hang and store your hats, coats, purses and moreEasily mounts to walls with included hardwareAll-natural wood constructionGreat for entryway, closet and garage use
 
 ---
 
 Product 2
-Product UID: 186115
-Title: Sheffield Home 16 in. W x 30 in. H Vanity in Classic Black with Resin Vanity Top in White
+Product UID: 195815
+Title: Zenith Slimline 16 in. W Rolling Floor Wood Storage Shelf in White
 Matched Source: description
-Similarity Score: 0.7985
+Similarity Score: 0.7238
 
 Description:
-The BF103B wall-mounted vanity set adds modern styling to any bathroom space. Its size is ideal for smaller bathrooms. Free Standing vanity eliminates the need to drill into walls and makes installation a breeze. The resin basin provides ample space due to the side faucet mounting location. The ebony wood grain finished cabinet offers a rich feel and excellent contrast.16.6 in. W x 10 in. D provides excellent storage for bathrooms with limited spaceBasin has single hole faucet opening that can be mounted on right or left side, full width, single door storage for sleek modern lookVanity top is pre-drilled for easy installation of a single center hole faucet - faucet sold separatelyIncludes brushed nickel cabinet hardwareTempered resin vanity top provides excellent durability and water resistanceDecorative modern-style vanity gives your bathroom an elegant contemporary lookFull width, single door storageSoft-close door hinges prevents slamming and protects fingersCabinet is fully assembled for easy installationMDF construction offers excellent strength and durabilityRequires single hole low arc faucetFaucet and drain not included
+If you are searching for a versatile, maneuverable bathroom storage unit to fit into tight bathroom areas, look no further than the Zenith Slimline Rolling Floor Wood Storage Shelf in White. This attractive, space-saving organizer helps organize bathroom necessities and reduce clutter in a convenient rolling design. A white finish, decorative top and wainscot design on the front panel give this unit its distinctive charm. With a slim design to fit easily in narrow spaces, the unit features two large shelves that hold a wide array of bathroom products, while the easy-glide wheels offer quick, easy access to the shelves. Durable wood construction is strong enough to hold even your larger bathroom products.16 in. W x 26 in. H x 8 in. D, compact enough for small spacesWhite wood construction offers durable support and cleans easily with a damp clothTwo fixed shelves and a decorative chrome towel bar provide storage in the area between vanity and toiletShelf rails and dividers assist in organizing and separating your toiletriesSlim design fits easily into small bathroom areasDecorative top and wainscot design offer a unique, elegant appeal
 
 ---
 
 Product 3
-Product UID: 188316
-Title: Foremost Ellis 15-1/2 in. W x 7-7/8 in. D Vanity in Dark Walnut with Porcelain Vanity Top in White
-Matched Source: description
-Similarity Score: 0.7973
+Product UID: 214689
+Title: Stratford 24 in. L Decorative 4-Double Hook Wall Mount Wood Rack in White with Satin Nickel Hook
+Matched Source: attribute
+Similarity Score: 0.7132
 
 Description:
-Make a bold, modern statement with the Foremost Ellis Vanity in Dark Walnut with Porcelain Vanity Top. Perfect for smaller bathrooms, this wall mounted vanity is durably constructed with solid wood, natural wood veneers and clean, low-emission engineered wood and features a single door storage cabinet with a decorative groove pattern. The white, rectangular porcelain sink top has a small round basin, is pre-drilled for a single faucet and has below, a clear glass shelf on a stainless steel accent that has ample space for towels and other items. Suitable for contemporary or modern decor, this vanity is as visually striking as it is functional and is fully assembled for quick and easy installation. Pair with the matching Ellis mirror for a polished look.15-1/2 in. W x 7-7/8 in. D is the perfect size for a small bathroom or powder roomIncludes rectangular white porcelain top with a small, white vitreous china basinVanity top is pre-drilled for a single hole faucet; faucet sold separatelyVanity top is stain, acid and abrasion resistant for lasting beautySturdy construction with solid wood, natural wood veneers and clean low-emission engineered woodModern design with decorative groove pattern and dark walnut finish is ideal for contemporary decorExterior tempered glass shelf, stainless steel towel box and substantial interior cabinet offer ample space for bathroom essentialsConcealed and adjustable hinges are mounted on the right side of the cabinet and provide a clean, seamless lookCarved finger pull on door complements the modern designWall mount design frees-up floor spaceFully assembled for easy installationRequires single hole faucet
+Upgrade your storage options with the Stratford 4-Double Hook Wood Rack. This wall mounted piece creates a functional and tasteful way to hang and store your coats, hats, purses and more. Crafted from rustic wood and sturdy steel.Features 4-double hooksFunctional and stylish way to hang and store your coats, hats and pursesEasily mounts to walls with included hardwareConstructed of sturdy steel and all-natural wood
 
 ---
 
 Product 4
-Product UID: 210439
-Title: Home Decorators Collection Wellington 32 in. Vanity in Distressed White with Granite Vanity Top in Black
+Product UID: 199764
+Title: Home Styles Three-Drawer 44 in. W White Buffet with Wood Top and Hutch
 Matched Source: description
-Similarity Score: 0.7951
+Similarity Score: 0.7121
 
 Description:
-Updating your bathroom can be as simple as putting in a beautiful new bath vanity packed with storage and style. Visualize our Wellington Single Vanity with its smooth granite top in your guest bath or powder room. Richly detailed with rounded, ribbed corners, tapering legs, an applique design on its faux drawer and zinc alloy drawer pulls in an alluring bronze finish, this 2-drawer bathroom vanity cabinet stands for functional elegance. Crafted of real granite, the bath vanity top may contain swirling or veining which are part of the natural beauty of stone and have no effect on function or durability.Black granite topTop is pre-drilled for your faucetWhite under-mount vitreous china sink1 faux drawer and 2 working drawers with full extension ball bearing glidesZinc alloy drawer pulls in bronze finishAdjustable leg levelers35 in. H x 32 in. W x 22 in. DFaucet and drain not includedAssembly requiredInstructions on removing drawers is included
+Home Styles Large Server with Wood Top is constructed of hardwood and wood products in a white finish with a natural wood top. Features three utility drawers and two wood framed cabinet doors with an adjustable shelf for plenty of inside storage. Center wine storage area can be removed for open storage if desired. Hutch features two wood framed plexiglass doors with an adjustable shelf inside for plenty of storage. Center area with one shelf for additional storage or display. Brushed steel hardware. Size: 44 in. W x 17 in. D x 72.25 in. H.Solid hardwood in white finish with natural topThree drawers and two doors that open to adjustable shelf in each, open storage with removable 9 bottle wine rackHutch has two doors that open to adjustable shelf inside each, open storage in middle with adjustable shelf44 in. W x 17 in. D x 72.25 in. HProduct Questions Call us: (888) 680-7460 email us: servicedesk@homestyles-furniture.com need parts complete a parts request form online: http://www.homestyles-furniture.com/part_order_form.php
 
 ---
 
 Product 5
-Product UID: 218786
-Title: GROHE Concetto Single Hole 1-Handle Low-Arc Bathroom Faucet in Brushed Nickel-DISCONTINUED
-Matched Source: description
-Similarity Score: 0.7949
+Product UID: 164063
+Title: ClosetMaid 48 in. x 19-1/2 in. Melamine Workbench Top in White
+Matched Source: attribute
+Similarity Score: 0.7085
 
 Description:
-Use the GROHE Concetto Single Hole 1-Handle Low-Arc Bathroom Faucet in Brushed Nickel to spruce up a drab bath or powder room with a brushed nickel finish and sleek design. The single-handle, ADA-compliant fixture operates smoothly and rises to meet your needs. Ceramic disk valving offers drip-free performance for water-efficient functionality.Single-handle setup delivers effortless functionalityLow-arc spout offers a compact designSolid brass construction is built to lastBrushed nickel finish lends added durability to make cleanup a breezeSilkMove ceramic disk cartridge helps ensure leak-free performanceADA-compliant lever handleIncludes stainless-steel braided flexible supplies and drain
-
----
-
-Product 6
-Product UID: 124571
-Title: Sheffield Home 16.6 in. Vanity in Black with Tempered Glass Vanity Top in Clear Frosted
-Matched Source: description
-Similarity Score: 0.7926
-
-Description:
-The BF101 wall-mounted vanity set adds modern styling to any bathroom space. Its size is ideal for smaller bathrooms. Wall mounting provides flexibility to hang and different heights. The glass basin provides ample space due to the side faucet mounting location. The ebony wood grain finished cabinet offers a rich feel and excellent contrast.16.6 in. W x 10 in. D provides excellent storage for bathrooms with limited spaceBasin has single hole faucet opening that can be mounted on right or left side, full width, single door storage for sleek modern lookVanity top is pre-drilled for easy installation of a single center hole faucet - faucet sold separatelyIncludes brushed nickel cabinet hardwareTempered glass vanity top provides excellent durability and water resistanceDecorative modern-style vanity gives your bathroom a elegant contemporary lookFull width, single door storageSoft-close door hinges prevents slamming and protects fingersCabinet is fully assembled for easy installationMDF construction offers excellent strength and durabilityRequires single hole low arc faucetFaucet and drain not included
-
----
-
-Product 7
-Product UID: 196134
-Title: Bellaterra Home Midlands R 39 in. Single Vanity in Black with Porcelain Vanity Top in White
-Matched Source: description
-Similarity Score: 0.7920
-
-Description:
-Satisfy your home design needs with this black finished vanity offering a contemporary smart design with plenty of storage space and traditional features. The modern bathroom vanity is constructed of solid wood. Features include an oversized white ceramic sink and counter-top and modern chrome accents. The style and beauty of the vanity is an exquisite design for a bathroom. Dimension: 39 in. W x 19 in. D x 35 in. H. Birch, Black, White Ceramic, White Ceramic Sink, Brush Nickel finish hardware and leg caps. Pre-drilled with 1 hole - One slot faucet, faucet and mirror not included. Slight assembly required.Wood cabinet, no MDF or particle boardSoft close hingesFull extension drawer glidesFurniture grade semi-closing water proof wood finish protects against bathroom humidityFaucet not includedIntegrated sink with counter topSink material: ceramicSink shape: ovalSlight assembly requiredMeasurement tolerance: (+/- 1/2 in.)Made in China1 year manufacture warranty against defects - parts
-
----
-
-Product 8
-Product UID: 176155
-Title: Delta Trinsic Wall-Mount Single-Handle Low-Arc Bathroom Faucet in Venetian Bronze
-Matched Source: description
-Similarity Score: 0.7885
-
-Description:
-Sleek, minimalistic design makes this Trinsic Wall Mount 1-Handle Low Arc Bathroom Faucet in Venetian Bronze the perfect complement to today's modern home. Wall-mount faucets like this one offer a convenient way to save counter space without sacrificing style and functionality. Getting ready in the morning is far from routine when you are surrounded by a bath that reflects your personal style. You can buy with confidence, knowing that Delta backs this faucet with a lifetime limited warranty.WaterSense certified to promote water conservationADA-compliant lever handle provides precise temperature and volume controlMatching finish spring-loaded pop-up included with drain plugLifetime limited warranty covers parts and finish defects
-
----
-
-Product 9
-Product UID: 180875
-Title: stufurhome Newport 48 in. W x 22 in. D Vanity in Gray with Marble Vanity Top in Carrara White and Mirror
-Matched Source: description
-Similarity Score: 0.7882
-
-Description:
-Add a tinge of contemporary charm to your bathroom by installing the  Newport Grey 48 inch Single Sink Bathroom Vanity by Stufurhome. This visually-appealing vanity in grey is constructed using the finest-grade solid wood that assures years of durability and strength. An undermount porcelain basin is charmingly topped over a smooth and glistening carrara white marble top that comes pre-drilled for installation of a three-hole faucet. Nine functional pull-out drawers and cabinet lend a storage area that is spacious enough to house everyday bathroom toiletries. Brushed nickel hardware gives a classy finishing touch to this vanity, while soft-closing door hinges ensure that you never get to hear any door slamming. The look of this vanity is further refined by complementing it harmoniously with a matching wood-framed mirror.Solid wood constructionRectangular under-mount porcelain basinDTC soft-closing drawersBrushed nickel hardwareCarrara white marble top9 functional drawersThree (3) pre-drilled faucet holesWood framed mirrorBacksplash included, faucet not included, accessories not included
-
----
-
-Product 10
-Product UID: 144680
-Title: Delta Classic Single-Handle Kitchen Faucet in Chrome
-Matched Source: description
-Similarity Score: 0.7868
-
-Description:
-The Delta Classic single-handle kitchen faucet in chrome has clean styling and simple lines for a practical, elegant appearance. The chrome finish can create a bright, modern accent for almost any kitchen. This faucet has a single lever handle for ease of use. The solid brass construction helps ensure reliable, long-lasting use. This ADA-compliant faucet comes with supply lines for installation.Chrome finish creates a bright, modern lookSolid brass construction for reliable, long-lasting performanceSingle lever handle for ease of controlClassic design can install easily in single-hole sinksSpout swivels up to 360 for full-sink accessDelta diamond seal technology helps provide virtually pure water delivery systemInnoFlex waterways are cross linked with an electron beam to help eliminate unpleasant odors or tasteADA compliantIncludes handle and supply lines for installation
+Add a ClosetMaid 48 in. White Melamine Workbench Top to the Dimensions cabinets to create your own custom work area. Durable surface is resistant to scratches, chemicals and stains. Combine with base cabinets and wall cabinets (sold separately) to make more storage space in the garage, workshop or hobby area.Assembled size: 1 in. H x 48 in. W x 19-1/2 in. D50 lbs. weight capacityUV resistant, will not yellow in sunlightCleans with a damp cloth
 
 User query:
-I’m renovating a small basement bathroom and I need something that can work as a clean-looking vanity faucet. Ideally I want a brushed nickel or chrome finish because the rest of the hardware is silver-toned, and I’d prefer something that feels durable and easy to install without needing a super complicated setup. It does not have to be the most expensive option, but I want something that looks modern, works well for everyday use, and would fit a simple residential bathroom sink replacement.
+Looking for wood and white rack for organizing tools, supplies, or household items.
 
 First, identify the user's intent from the User query text immediately above.
 
