@@ -33,81 +33,78 @@ Do not invent product details.
 Do not use outside knowledge.
 If the retrieved data does not mention something, say it is unclear.
 The final answer must not include hidden reasoning, analysis notes, or <think> tags.
+Do not refer to products as "Product 1", "Product 2", or by list position. Use the product title and UID.
+Do not include comparison tables or discuss every retrieved product.
 
 Retrieved products:
-Product 1
-Product UID: 167346
-Title: Jaki Jorg Miterless 4 in. x 4 in. Untreated Wood Traditional Flat Slip Over Fence Post Cap
+Title: Spray Finishing and Other Techniques New Best of Fine Woodworking Book
+UID: 110717
 Matched Source: description
-Similarity Score: 0.7510
+Similarity Score: 0.7377
 
 Description:
-Give your fence the protection it deserves with Slip Over Miterless Wood Post Caps. Fitting atop fence posts measuring 3-3/4 in. to 3-7/8 in., the stylish mahogany base prolongs the life of any fence post by guarding against rain and the elements. The one piece joint less design features a Traditional style trim and no staples or glue. The advantage of Miterless post caps, versus others with joints at the corners, is evident in the prolonged life of your deck and fence posts. Less water gets underneath the cap and into the top of your post making our Miterless products a necessity for any deck or fence. The one-piece flat cap is ready for weather treating to maximize protection, or controlled exposure for rustic appeal. Most effective when mounted with glue, the post cap installs easily and adds style to your yard while helping your fence last a lifetime.California residents: see&nbsp;Proposition 65 informationMahogany hard wood base withstands extreme weather better than pressure treated pine or cedarNatural wood grain, mahogany/cedar colorCan be left natural, stained, or paintedRouted bottom is constructed without miter joints which means never splitting apart at the cornersFits posts measuring 3-3/4 in. to 3-7/8 in. in actual sizeAll post caps, whether hard wood or metal, will provide a lifetime of protection from weathering and deteriorationAll post caps slip over the top of the post for easy installationMounting with liquid nail recommended
+A professional looking finish is the dream of most woodworkers. One way to achieve it is through modern spray finishing. Recent improvements in the equipment and widespread adoption have lowered costs making this technique widely available. But there is little information apart from magazine articles and our 1996 book. This book collects the best recent articles from "Fine Woodworking" on spray finishing and other modern finishing techniques. Table of Contents Section I: Choosing a Finish Section 2: Surface Preparation Section 3: Spray Equipment Section 4: Spray Finishing Techniques Section 5: Aerosol Finishes Section 6: Special techniquesCrafts and hobbies-woodwork generalWood finishingWoodworkCrafts hobbies
 
 ---
 
-Product 2
-Product UID: 213297
-Title: Jaki Jorg Miterless 4 in. x 6 in. Untreated Mahogany Copper Pyramid Slip Over Fence Post Cap
+Title: Vermont American 1/2 in. Carbide Tipped Hinge Mortise Router Bit
+UID: 190358
 Matched Source: description
-Similarity Score: 0.7475
+Similarity Score: 0.7286
 
 Description:
-Give your fence the protection it deserves with Slip Over Miterless Wood Post Caps. Fitting atop fence posts measuring 3-1/2 in. to 5-1/2 in., the stylish mahogany base prolongs the life of any fence post by guarding against rain and the elements. The one piece joint-less design features a New England style trim and no staples or glue. The advantage of Miterless post caps is evident in the prolonged life of fence posts and caps. Outfitted with a 100% copper pyramid, caps are ready for weather treating to maximize protection, or controlled exposure for rustic appeal. Most effective when mounted with glue, the post cap installs easily and adds style to your yard while helping your fence last a lifetime.California residents: see&nbsp;Proposition 65 informationMahogany hard wood base withstands extreme weather better than pressure treated pine or cedar. Metal pyramid adds further protection from rain and natural damageNatural wood grain, mahogany/cedar color, West Indies trim, 100% copper finishWood base can be left natural, stained, or painted. Pyramid can be treated to preserve original sheen, or left to patina naturallyRouted bottom is constructed without miter joints which means never splitting apart at the cornersFits posts measuring 3-1/2 in. by 5-1/2 in. in actual sizeAll post caps slip over the top of the post for easy installationMounting with liquid nails construction adhesive recommendedCopper lid ships separately and requires assembly to wood base with liquid nail (not included)
+High quality tungsten carbide tips provide superior wear resistance and sharp edges. Mortising bits are ideal for surfacing operations and cut fast for mortises. Heat treated shanks and bodies provide added durability.Additional chip clearance for fast mortisingUseful when good chip clearance is importantSmooth finish is ideal for surfacing operationsBalanced cutting with minimal vibrationUse with hinge template and templet guide for optimal resultsIncludes plastic storage case
 
 ---
 
-Product 3
-Product UID: 140440
-Title: DeckoRail Verona 6 in. x 6 in. Copper Metal High Point Pyramid Post Cap
+Title: Diablo 1/4 in. Chamfer 45å¡ Router Bit
+UID: 145810
 Matched Source: description
-Similarity Score: 0.7469
+Similarity Score: 0.7193
 
 Description:
-Make your deck or fence extraordinary by adding unique post caps. This 6 in. x 6 in. Pressure-Treated Copper Pyramid High Point Post Cap lends a unique look to any deck, porch, fence, sign, mailbox or project. Treated to resist decay and termites, it's perfect for any outdoor application. And, these post caps are decorative as well as practical. They add a unique finishing touch and a timeless custom look. Plus, unmatched durability means you'll enjoy long-lasting performance.California residents: see&nbsp;Proposition 65 informationPost cap fits a nominal 6 in. x 6 in. wood post (Actual post dimensions 5-1/2 in. x 5-1/2 in.)Made of pressure-treated wood capped with elegant copperAdds a custom touch to your fence, deck or railingPyramid-shape designSuitable for residential or commercial useNote: Product may vary by store
+Get the Diablo Chamfer 45 Router Bit for construction and remodeling projects. This router bit helps you achieve smoother and more accurate cuts for great results when working with wood, plywood, melamines and MDF.Designed to fit a minimum chuck size of 1/4 in.Carbide materialTiCo-carbide with titanium to promote a longer cutting life and finer finishPerma-shield non-stick coating helps protect the bit from heat, rust and pitch build upComputer balancing helps create smooth and accurate cutsGreat for use on wood, plywood, melamines and MDF
 
 ---
 
-Product 4
-Product UID: 169888
-Title: DeckoRail Pressure-Treated 6 in. x 6 in. Pine Copper Ball Top Post Cap
+Title: Avanti 10 in. x 60-Tooth Fine Finish Saw Blade
+UID: 101804
 Matched Source: description
-Similarity Score: 0.7441
+Similarity Score: 0.7180
 
 Description:
-Make your deck or fence extraordinary by adding unique post caps. This 6 in. x 6 in. Pressure-Treated Copper Ball Top Post Cap lends a unique look to any deck, porch, fence, sign, mailbox or project. Treated to resist decay and termites, it's perfect for any outdoor application. And, these post caps are decorative as well as practical. They add a unique finishing touch and a timeless custom look. Plus, unmatched durability means you'll enjoy long-lasting performance.California residents: see&nbsp;Proposition 65 informationPine constructionAttractive yet durable copper-plated steel finish helps keep posts safe from the elementsLow-maintenance, never needs painting or stainingPost cap fits nominal 6 in. x 6 in. wood post (Actual post dimensions 5-1/2 in. x 5-1/2 in.)Each box contain 1 post cap
+Rejuvenate the wood-cutting ability of your table saw or miter saw with this 10 in. Fine Finish Saw Blade from Avanti. Constructed with carbide-reinforced steel, this replacement blade is outfitted with 60 sharp teeth to cleanly slice through MDF, hardwood, softwood, plywood and molding. Four expansion slots help the blade expand and contract during use, resulting in minimal vibration and straight cuts.Carves cleanly and leaves a fine finishExpansion slots reduce noise and heat buildup for smooth operationEconomical, high-performance blade can be sharpened to extend lifeNot intended for use above 6000 RPMRecommended for DIY projects and construction useNote: product may vary by store
 
 ---
 
-Product 5
-Product UID: 203010
-Title: Jaki Jorg Miterless 6 in. x 6 in. Untreated Wood Pyramid Slip Over Fence Post Cap
+Title: Porter-Cable 24 in. Omnijig Joinery System
+UID: 182951
 Matched Source: description
-Similarity Score: 0.7432
+Similarity Score: 0.7177
 
 Description:
-Give your fence the protection it deserves with Slip over Miterless Wood Post Caps. Fitting atop fence posts measuring 5-1/2 in. to 5-3/4 in., the stylish mahogany pyramid prolongs the life of any fence post by guarding against rain and the elements. Our one piece joint less design features a New England style trim and no staples or glue. The advantage of Miterless post caps, versus others with joints at the corners, is evident in the prolonged life of your deck and fence posts. Less water gets underneath the cap and into the top of your post making our Miterless products a necessity for any deck or fence. This one-piece pyramid cap is ready for weather treating to maximize protection or controlled exposure for rustic appeal. Most effective when mounted with glue, the post cap installs easily and adds style to your yard while helping your fence last a lifetime.California residents: see&nbsp;Proposition 65 informationMahogany hard wood base withstands extreme weather better than pressure treated pine or cedarNatural wood grain, mahogany/cedar colorCan be left natural, stained or paintedRouted bottom is constructed without miter joints which means never splitting apart at the cornersFits posts measuring 5-1/2 in. to 5-3/4 in. in actual sizeAll post caps, whether hard wood or metal, will provide a lifetime of protection from weathering and deteriorationAll post caps slip over the top of the post for easy installationMounting with liquid nail recommended
+DIYers of any skill level can carve professional-looking through dovetails, box joints and sliding dovetails with the Porter-Cable 24 in. Omnijig Joinery System. A color-coded recipe card is situated on the front of the machine for step-by-step guidance in making controlled router cuts while a multi-bit height attachment allows users to quickly make adjustments for different wood thicknesses. Router bit depth gauges ensure precise cuts are made every time so planks align snugly and smoothly.Stabilizer bar enhances router control while deflecting chips downward for a cleaner work environmentSingle-hand clamping system allows for easy positioning of wood on jigMachined, textured surfaces provide excellent grip on wood during operation when used in conjunction with steel clamping mechanismDurable steel and alloy construction provides longevityPre-assembled and factory setAdjustable, split-finger designFixed-space template enables half-blind dovetails
 
 User query:
-I need a durable wooden corner post for an outdoor residential fence that can be painted or stained.
+Looking for something that improves cutting speed and finish quality for a renovation project.
 
 First, identify the user's intent from the User query text immediately above.
 
 Respond in this structure:
 
-1. Best answer:
-- Give the direct answer or best product recommendation.
+1. Best recommendation:
+- Start directly with the best product title and UID.
+- Give the direct recommendation.
 
 2. Why this fits:
-- Explain using evidence from the retrieved product description and attributes.
+- Explain why it matches the user's query.
+- Use evidence from the retrieved product description.
+- Mention relevant use cases, material, finish, size, durability, or installation details when available.
 
-3. Requirement check:
-- List the main hard constraints and soft preferences from the user query.
-- Mark each as satisfied, missing, unclear, or partially matched.
+3. Alternatives:
+- Mention up to 2 relevant alternatives if useful.
+- Use each alternative's product title and UID.
+- Give a brief one-line reason why each alternative may be worth considering.
 
-4. Other relevant options:
-- Mention up to 2 alternatives if useful.
-- Explain briefly why they are weaker or different.
-
-5. Final recommendation:
-- Give a short plain-language final suggestion.
+4. Follow-up:
+- End with one natural follow-up question only if it would help the user choose.

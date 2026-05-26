@@ -13,13 +13,12 @@ MAX_PRODUCTS_FOR_ANSWER = 5
 def format_retrieved_products(products: list[dict]) -> str:
     blocks = []
 
-    for index, product in enumerate(products, start=1):
+    for product in products:
         description_text = product.get("description_text") or "No description available."
 
         block = f"""
-Product {index}
-Product UID: {product.get("product_uid")}
 Title: {product.get("product_title")}
+UID: {product.get("product_uid")}
 Matched Source: {product.get("source")}
 Similarity Score: {product.get("score", 0):.4f}
 
@@ -69,6 +68,8 @@ Do not invent product details.
 Do not use outside knowledge.
 If the retrieved data does not mention something, say it is unclear.
 The final answer must not include hidden reasoning, analysis notes, or <think> tags.
+Do not refer to products as "Product 1", "Product 2", or by list position. Use the product title and UID.
+Do not include comparison tables or discuss every retrieved product.
 
 Retrieved products:
 {retrieved_products_text}
@@ -80,22 +81,22 @@ First, identify the user's intent from the User query text immediately above.
 
 Respond in this structure:
 
-1. Best answer:
-- Give the direct answer or best product recommendation.
+1. Best recommendation:
+- Start directly with the best product title and UID.
+- Give the direct recommendation.
 
 2. Why this fits:
-- Explain using evidence from the retrieved product description and attributes.
+- Explain why it matches the user's query.
+- Use evidence from the retrieved product description.
+- Mention relevant use cases, material, finish, size, durability, or installation details when available.
 
-3. Requirement check:
-- List the main hard constraints and soft preferences from the user query.
-- Mark each as satisfied, missing, unclear, or partially matched.
+3. Alternatives:
+- Mention up to 2 relevant alternatives if useful.
+- Use each alternative's product title and UID.
+- Give a brief one-line reason why each alternative may be worth considering.
 
-4. Other relevant options:
-- Mention up to 2 alternatives if useful.
-- Explain briefly why they are weaker or different.
-
-5. Final recommendation:
-- Give a short plain-language final suggestion.
+4. Follow-up:
+- End with one natural follow-up question only if it would help the user choose.
 """
 
 
